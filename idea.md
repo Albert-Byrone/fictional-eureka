@@ -1,0 +1,1 @@
+pip install -e .(install directory as a package) (-e means editable)
