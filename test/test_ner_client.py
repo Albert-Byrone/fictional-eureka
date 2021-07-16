@@ -26,8 +26,8 @@ class TestNerClient(unittest.TestCase):
         doc_ents = [{ 'text': 'Albert Byrone', 'label_': 'PERSON'}]
         model.return_doc_ents(doc_ents)
         ner = NamedEntityClient(model)
-        result = ner.get_entity("Pass some string")
-        expected_results ={ 'ents': [ { 'text': 'Albert Byrone', 'label': 'PERSON'}], 'html': ''}
+        result = ner.get_entity("....")
+        expected_results ={ 'ents': [ {'ent': 'Albert Byrone', 'label': 'Person'}], 'html': ''}
         self.assertListEqual(result['ents'], expected_results['ents'])
 
     
